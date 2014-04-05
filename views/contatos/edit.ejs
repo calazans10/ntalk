@@ -3,12 +3,13 @@
 <% include header %>
 
 <section class="row-fluid text-center">
-  <form action="/contato/<%- id %>" method="post" class="well form-inline">
+  <form action="/contato/<%- contato._id %>" method="post" class="well form-inline">
+    <h4>Editar contato</h4>
     <input type="hidden" name="_method" value="put">
-    <label for="nome">Nome:</label>
-    <input type="text" name="contato[nome]" id="nome" value="<%- contato.nome %>" class="input-medium">
-    <label for="email">E-mail:</label>
-    <input type="email" name="contato[email]" id="email" value="<%- contato.email %>" class="input-medium">
+    <label>Nome:</label>
+    <input type="text" name="contato[nome]" value="<%- contato.nome %>" class="input-medium">
+    <label>E-mail:</label>
+    <input type="text" name="contato[email]" value="<%- contato.email %>" class="input-medium">
     <button type="submit" class="btn btn-primary">Atualizar</button>
   </form>
 </section>
